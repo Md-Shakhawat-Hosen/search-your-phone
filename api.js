@@ -135,7 +135,7 @@ const showDetailsDisplay = (phone) => {
 
     const div = document.createElement('div');
     div.innerHTML = `
-     <img src="${phone.image}" alt="">
+     <img class="w-1/2 mx-auto" src="${phone.image}" alt="">
        <h2 class="font-bold">${phone.name}</h2>
        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
        <h2><span class="font-bold">Storage :</span> ${phone?.mainFeatures?.storage}</h2>
