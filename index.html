@@ -41,8 +41,28 @@
             <span class="loading loading-spinner loading-lg"></span>
           </div>
 <!-- display spinner end-->
-
+<!-- <button class="btn" onclick="show_details_modal.showModal()">open modal</button> -->
+<dialog id="show_details_modal" class="modal">
+  <form method="dialog" class="modal-box">
+    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+     <div id="details-container">
+        <!-- <img src="" alt="">
+       <h2 class="font-bold">Iphone 13 Pro Max</h2>
+       <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+       <h2><span class="font-bold">Storage :</span> 128GB/256GB/1TB Storage, No card slot</h2>
+       <h2><span class="font-bold">Display Size :</span> 6.7 Inches, 109.8 cm</h2>
+       <h2><span class="font-bold">Chipset :</span> Apple A15 Bionic</h2>
+       <h2><span class="font-bold">Memory :</span> 128GB 6 GB RAM, 256GB RAM, 512GB RAM1 1TB 6GB RAM</h2>
+       <h2><span class="font-bold">Slug : </span> Applice_Iphone_13_Pro_Max</h2>
+       <h2><span class="font-bold">Release data :</span> Released 2021, September 24</h2>
+       <h2><span class="font-bold">Brand :</span> Apple</h2>
+       <h2><span class="font-bold">GPS : </span> AYes, with A-GPS, GLONASS, GALILEO, BDS, QZSS</h2> -->
+     </div>
+  </form>
+</dialog>
         <div id="product-container" class="product-container grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <!-- You can open the modal using ID.showModal() method -->
+
           <!-- <div class="one-product">
             <div class="card card-compact w-96 bg-base-100 shadow-xl">
               <figure>
@@ -66,6 +86,8 @@
         <div class="text-center">
              <button id="show-all-btn" onclick="showAll()" class="bg-blue-500 text-white font-bold px-3 py-2 mt-4 hidden">Show All</button>
         </div>
+
+
       </section>
     </main>
 
