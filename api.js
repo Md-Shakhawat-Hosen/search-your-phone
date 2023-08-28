@@ -10,7 +10,7 @@ const loadPhone = async (inputText='13') => {
 
 
 
-const displayPhones = phones => {
+const displayPhones = (phones) => {
     console.log(phones.length)
      
     const productContainer = document.getElementById('product-container');
@@ -26,7 +26,26 @@ const displayPhones = phones => {
        notFound.classList.add("hidden");
     }
 
-    
+
+ const showBtn = document.getElementById("show-all-btn");
+   
+  
+
+    if (phones.length > 13) {
+        
+        phones = phones.slice(0,12);
+
+        showBtn.classList.remove('hidden')
+        console.log(phones);
+
+    }
+     else {
+        showBtn.classList.add("hidden");
+     }
+     
+ 
+     
+
     phones.forEach(element => {
          const div = document.createElement("div");
 
@@ -54,12 +73,15 @@ const displayPhones = phones => {
     productContainer.appendChild(div);
     });
     
+    toggleLoadingSpinner(false);
 }
 
 
 
 
 const SearchLoader = () => {
+
+    toggleLoadingSpinner(true);
     const inputFieldId = document.getElementById("search-input-id");
     const inputText = inputFieldId.value;
 
@@ -70,6 +92,23 @@ const SearchLoader = () => {
 
 
 
+const toggleLoadingSpinner = (isLoading) => {
+     const spinner = document.getElementById('spinner-id');
+     if (isLoading) {
+        spinner.classList.remove('hidden')
+     }
+     else {
+        spinner.classList.add('hidden')
+     }
+}
+
+//  const inputFieldId = document.getElementById("search-input-id");
+ 
+// const showAll = () =>{
+  
+//     const text = inputFieldId.value;
+//     loadPhone(text)
+// }
 
 
 loadPhone()

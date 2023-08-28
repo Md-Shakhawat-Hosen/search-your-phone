@@ -16,7 +16,7 @@
     <header></header>
 
     <main>
-      <section class="max-w-screen-xl mx-auto px-10">
+      <section class="max-w-screen-xl mx-auto px-10 mb-4">
         <div class="bg-slate-400 py-5 px-10 mb-7">
           <div class="text-center space-y-3">
             <h1 class="text-3xl">Search Your Phone</h1>
@@ -35,7 +35,14 @@
             <h2 id="not-found" class="text-center text-4xl font-bold hidden">There is no data found</h2>
          </div>
 
-        <div id="product-container" class="product-container grid grid-cols-3 gap-5">
+          <!-- display spinner -->
+
+          <div id="spinner-id" class="text-center mt-14 hidden">
+            <span class="loading loading-spinner loading-lg"></span>
+          </div>
+<!-- display spinner end-->
+
+        <div id="product-container" class="product-container grid grid-cols-1 lg:grid-cols-3 gap-5">
           <!-- <div class="one-product">
             <div class="card card-compact w-96 bg-base-100 shadow-xl">
               <figure>
@@ -54,6 +61,10 @@
               </div>
             </div>
           </div> -->
+        </div>
+
+        <div class="text-center">
+             <button id="show-all-btn" onclick="showAll()" class="bg-blue-500 text-white font-bold px-3 py-2 mt-4 hidden">Show All</button>
         </div>
       </section>
     </main>
