@@ -53,7 +53,7 @@ const displayPhones = (phones,isShow) => {
 
          div.innerHTML = `
     
-      <div class="card card-compact w-96 bg-slate-200 shadow-xl">
+      <div class="card card-compact lg:w-96 bg-slate-200 shadow-xl">
               <figure>
                 <img class="p-4"
                   src="${element.image}"
@@ -137,7 +137,7 @@ const showDetailsDisplay = (phone) => {
     div.innerHTML = `
      <img class="w-1/2 mx-auto" src="${phone.image}" alt="">
        <h2 class="font-bold">${phone.name}</h2>
-       <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+       <p>It is a long established fact. when looking at its layout.</p>
        <h2><span class="font-bold">Storage :</span> ${phone?.mainFeatures?.storage}</h2>
        <h2><span class="font-bold">Display Size :</span>${phone?.mainFeatures?.displaySize} </h2>
        <h2><span class="font-bold">Chipset :</span> ${phone?.mainFeatures?.chipSet}</h2>
@@ -145,7 +145,7 @@ const showDetailsDisplay = (phone) => {
        <h2><span class="font-bold">Slug : </span>${phone?.slug} </h2>
        <h2><span class="font-bold">Release data :</span> ${phone?.releaseDate}</h2>
        <h2><span class="font-bold">Brand :</span> ${phone?.brand}</h2>
-       <h2><span class="font-bold">GPS : </span> ${phone?.others?.GPS}</h2>
+       <h2><span class="font-bold">GPS : </span> ${phone?.others?.GPS || 'NO GPS'}</h2>
     
     
     `;
