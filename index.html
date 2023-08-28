@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <section class="max-w-screen-xl mx-auto px-10">
+        <div class="bg-slate-400 py-5 px-10 mb-7">
+          <div class="text-center space-y-3">
+            <h1 class="text-3xl">Search Your Phone</h1>
+            <input
+              class="px-3 py-2 w-3/4"
+              type="text"
+              placeholder="search.."
+              name=""
+              id="search-input-id"
+            />
+            <button onclick="SearchLoader()" class="bg-blue-400 px-3 py-2 text-white">Search</button>
+          </div>
+        </div>
+         
+         <div>
+            <h2 id="not-found" class="text-center text-4xl font-bold hidden">There is no data found</h2>
+         </div>
+
+        <div id="product-container" class="product-container grid grid-cols-3 gap-5">
+          <!-- <div class="one-product">
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+              <figure>
+                <img
+                  src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="text-center font-bold">Iphone 13 Pro Max</h2>
+                <p class="text-center">There are many variations of passages of available, but the majority have suffered</p>
+                <h2 class="text-center font-bold">$999</h2>
+                <div class="card-actions justify-center">
+                  <button class="btn btn-primary">Show Details</button>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+
+    <script src="./api.js"></script>
+  </body>
+</html>
